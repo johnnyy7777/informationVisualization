@@ -18,8 +18,6 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 import plotly.graph_objs as go
 import plotly.express as px
 import pandas as pd
-import seaborn as sns
-from matplotlib import pyplot as plt
 ------------------
 
 
