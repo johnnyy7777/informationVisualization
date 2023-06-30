@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Implementations used for preprocessing &#8212; Draft</title>
+    <title>Data Preprocessing &#8212; Draft</title>
   
   
   
@@ -144,7 +144,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="notebook.html">
-                    Datastory: Socioeconomic inequality
+                    Socioeconomic inequality
                 </a>
             </li>
         </ul>
@@ -361,7 +361,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Implementations used for preprocessing</h1>
+    <h1>Data Preprocessing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -371,7 +371,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Implementations used for preprocessing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Data Preprocessing</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-following-implementations-were-used-to-preprocess-the-datasets-into-files-that-are-used-for-the-data-story">The following implementations were used to preprocess the datasets into files that are used for the data story.</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#thousands">Thousands</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#correlations">Correlations</a></li>
 </ul>
@@ -386,8 +389,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="implementations-used-for-preprocessing">
-<h1>Implementations used for preprocessing<a class="headerlink" href="#implementations-used-for-preprocessing" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-preprocessing">
+<h1>Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Permalink to this headline">#</a></h1>
+<p>Student names: Chelsea Luo, Nora Kahleogullari, Edwin Cheng, Johnny Yang</p>
+<p>Team number: 64</p>
+<section id="the-following-implementations-were-used-to-preprocess-the-datasets-into-files-that-are-used-for-the-data-story">
+<h2>The following implementations were used to preprocess the datasets into files that are used for the data story.<a class="headerlink" href="#the-following-implementations-were-used-to-preprocess-the-datasets-into-files-that-are-used-for-the-data-story" title="Permalink to this headline">#</a></h2>
 <p>Converting Excel files to csv files</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -775,9 +782,10 @@ document.write(`
 </div></div></div>
 </div>
 </section>
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="thousands">
 <h1>Thousands<a class="headerlink" href="#thousands" title="Permalink to this headline">#</a></h1>
-<p>Some data is given in thousands instead of an exact number, using this implementation we can convert the files to exact numbers.</p>
+<p>Some data is given in thousands instead of an exact number, using this implementation we can convert the files easily to exact numbers. This saves a lot of time if there are many instances in the dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -785,7 +793,7 @@ document.write(`
 <span class="c1"># Read the CSV file</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dataset2.csv&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
-<span class="c1"># Convert values in the &quot;total&quot; and &quot;number&quot; columns from thousands to actual numbers</span>
+<span class="c1"># Convert values in the &quot;variable1&quot; and &quot;variable2&quot; columns from thousands to actual numbers, can be changed upon different datasets</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;white&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;white&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1000</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;hispanic&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;hispanic&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1000</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1000</span>
@@ -887,7 +895,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Implementations used for preprocessing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Data Preprocessing</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-following-implementations-were-used-to-preprocess-the-datasets-into-files-that-are-used-for-the-data-story">The following implementations were used to preprocess the datasets into files that are used for the data story.</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#thousands">Thousands</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#correlations">Correlations</a></li>
 </ul>
