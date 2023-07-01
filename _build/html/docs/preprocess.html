@@ -409,7 +409,7 @@ document.write(`
 <span class="kn">import</span> <span class="nn">openpyxl</span>
 
 <span class="c1"># Specify the directory where your Excel files are located</span>
-<span class="n">excel_directory</span> <span class="o">=</span> <span class="s2">&quot;./Excel/DatasetTwo&quot;</span>
+<span class="n">excel_directory</span> <span class="o">=</span> <span class="s2">&quot;excel_file.xlsx&quot;</span>
 
 <span class="c1"># Get a list of all Excel files in the directory</span>
 <span class="n">excel_files</span> <span class="o">=</span> <span class="p">[</span><span class="n">file</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">excel_directory</span><span class="p">)</span> <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.xlsx&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.xls&quot;</span><span class="p">)]</span>
@@ -433,14 +433,14 @@ document.write(`
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">9</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">excel_directory</span> <span class="o">=</span> <span class="s2">&quot;./Excel/DatasetTwo&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">excel_directory</span> <span class="o">=</span> <span class="s2">&quot;excel_file.xlsx&quot;</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># Get a list of all Excel files in the directory</span>
 <span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">excel_files</span> <span class="o">=</span> <span class="p">[</span><span class="n">file</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">excel_directory</span><span class="p">)</span> <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.xlsx&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.xls&quot;</span><span class="p">)]</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1"># Iterate over each Excel file</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="k">for</span> <span class="n">excel_file</span> <span class="ow">in</span> <span class="n">excel_files</span><span class="p">:</span>
 <span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="c1"># Read the Excel file into a pandas DataFrame</span>
 
-<span class="ne">FileNotFoundError</span>: [WinError 3] The system cannot find the path specified: &#39;./Excel/DatasetTwo&#39;
+<span class="ne">FileNotFoundError</span>: [WinError 3] The system cannot find the path specified: &#39;excel_file.xlsx&#39;
 </pre></div>
 </div>
 </div>
